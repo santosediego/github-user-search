@@ -11,6 +11,7 @@ const Navbar = () => (
             <h4>Bootcamp DevSuperior</h4>
         </Link>
     </nav>
+    /*Tudo posso Naquele que me Fortalece*/
 );
 
 export default Navbar;
