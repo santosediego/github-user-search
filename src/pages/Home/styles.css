@@ -1,0 +1,31 @@
+.home-container {
+    margin-top: 117px;/* Reduzi para poder ficar apresentavel na tela (pelo menos no meu monitor)*/
+    padding-left: 120px;
+    width: 612px;
+}
+
+.text-title {
+    font-family: Red Hat Display;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: 0.02em;
+    color: #062847;
+}
+
+.text-description {
+    padding-top: 24px;
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 36px;
+    color: #5A6774;
+}
+
+.text-email {
+    color: #1890FF;
+}
+
+.btn-comecar {
+    margin-top: 48px;
+}

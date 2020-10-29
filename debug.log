@@ -1,0 +1,2 @@
+[1029/085133.208:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1029/103119.376:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Diego Santos\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\d0d46de6-4be1-408f-aa78-1b2e0b3599f4: O sistema não pode encontrar o caminho especificado. (0x3)

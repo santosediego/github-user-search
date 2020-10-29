@@ -1,0 +1,20 @@
+.main-nav {
+    height: 62px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    background: #1890FF;
+}
+
+.nav-logo {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+}
