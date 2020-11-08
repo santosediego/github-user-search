@@ -1,44 +1,84 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Trabalho final do capítulo 03
+=============================
 
-## Available Scripts
+Enunciado do trabalho
+---------------------
 
-In the project directory, you can run:
+Você deverá criar um \***novo\*** projeto ReactJS, contendo uma busca
+simples de usuários integrando com a API oficial do **Github**. O
+trabalho envolve alguns dos principais conceitos passados até agora:
 
-### `npm start`
+-   Criar o layout baseado em um protótipo do Figma
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   Listar informações a partir de uma API
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+-   Loaders https://skeletonreact.com
 
-### `npm test`
+-   Formulários
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   Rotas
 
-### `npm run build`
+O projeto deverá estar ser criado com o ```create-react-app```, usando o
+template *TypeScript*:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```npx create-react-app github-user-search --template typescript```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+-------------------------------
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Link do protótipo no Figma: https://www.figma.com/file/NzeGEIb5oSAGtbu2BfvhDS/BDS-Cap3
 
-### `npm run eject`
+-------------------------------
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+A API do Github para realizar o desafio é: https://api.github.com/users/NOME_USUÁRIO
+Em que, que no lugar de \"**NOME_USUÁRIO**\", deverá ser enviado o nome
+do usuário que foi preenchido no formulário da aplicação.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-------------------------------
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Os componentes de \"Loaders\" já foram criados, e estão disponíveis em: https://github.com/devsuperior/dscatalog-resources/tree/master/frontend-web/cap03/desafio
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-------------------------------
 
-## Learn More
+Existe uma parte do desafio, que é formatar a data do \"*Membro desde*\"
+que existe no layout. Como não foi mostrado isso durante as aulas, essa
+formatação **não é obrigatória.** Ou seja, a entrega contendo o valor
+padrão retornado pela API do Github (Ex: *2013-10-19T16:11:46Z)*, será
+considerada válida.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Apesar da não obrigatoriedade, indico fortemente vocês pesquisarem como
+fazer isso, e inclusive já indico uma biblioteca super simples para
+fazer esse trabalho: https://github.com/iamkun/dayjs
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+A propósito, usaremos bastante essa biblioteca ao decorrer do curso\*\*
+
+Como o desafio é um projeto bem mais simples, **não é** necessário usar
+o **Bootstrap**. Apenas o CSS no Figma é suficiente para concluir o
+desafio. Acredito que será uma ótima chance para vocês treinarem suas
+skills de CSS \"puro\", sem a ajuda do Bootstrap que já entrega muita
+coisa pronta.
+
+Rotas a serem criadas na aplicação:
+-----------------------------------
+
+1.  \"/\" - Home da aplicação
+
+2.  \"/search\" - Tela de pesquisar usuário
+
+Como o trabalho será corrigido?
+-------------------------------
+
+### 1) Execução do projeto
+
+O professor deverá ser capaz de fazer um simples clone do projeto no
+Github, instalar as dependências (NPM ou YARN) e executar a aplicação.
+
+### 2) Testes manuais no navegador
+
+O professor fará um teste simples na aplicação, que será navegar até a
+rota de pesquisar usuário, e depois digitar um nome de usuário na caixa
+de pesquisa, e checar se as informações estão aparecendo corretamente.
+
+Lembrando que, a aplicação não precisa ser \"*pixel perfect*\" (tamanho
+em pixel de todos os elementos exatamente ao Figma), mas deve ser o mais
+próximo possível. Lembrando que, cores e tamanhos de fontes, por
+exemplo, deverão ser exatamente aos do Figma.
