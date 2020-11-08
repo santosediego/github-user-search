@@ -1,23 +1,28 @@
 import React, { useState } from 'react';
 import { makeRequest } from 'core/utils/request';
 import Button from 'core/components/Button';
+import { User } from 'core/types/User'
+//import ImageLoader from './components/ImageLoader';
+//import InfoLoader from './components/InfoLoader';
 import "./styles.css";
 
 const Search = () => {
 
     const [search, setSearch] = useState('');
-    const [userData, setUserData] = useState();
+    const [userData, setUserData] = useState<User>();
+    //const [isLoading, setIsLoading] = useState(false);
 
     const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(event.target.value)
     }
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        //setIsLoading(true);
         event.preventDefault();
 
         makeRequest({ url: `/${search}` })
-            .then(response => setUserData(response.data)
-            );
+            .then(response => setUserData(response.data))
+            //.finally(() => setIsLoading(false));
     }
 
     return (
@@ -50,20 +55,20 @@ const Search = () => {
                                 <div className="box-contador">Seguindo: {userData?.following}</div>
                             </div>
                             <div className="informations">
-                                <h1
+                                <h3
                                     className="information-title">Informações
-                                </h1>
+                                </h3>
                                 <p className="description-info">
-                                    <span className="text-info">Empresa: </span> {userData?.company}
+                                    <strong>Empresa: </strong> {userData?.company}
                                 </p>
                                 <p className="description-info">
-                                    <span className="text-info">Website/Blog: </span> {userData?.blog}
+                                    <strong>Website/Blog:</strong> {userData?.blog}
                                 </p>
                                 <p className="description-info">
-                                    <span className="text-info">Localidade:</span> {userData?.location}
+                                    <strong>Localidade:</strong> {userData?.location}
                                 </p>
                                 <p className="description-info">
-                                    <   span className="text-info">Membro desde:</span> {userData?.created_at}
+                                    <strong>Membro desde:</strong> {userData?.created_at}
                                 </p>
                             </div>
                         </div>
