@@ -2,16 +2,19 @@ import React from "react"
 import ContentLoader from "react-content-loader"
 
 const InfoLoader = () => (
-  <ContentLoader 
+  <ContentLoader
     speed={2}
-    width={870}
-    height={260}
-    viewBox="0 0 870 260"
+    width={840}
+    height={270}
+    viewBox="0 0 890 280"
     backgroundColor="#dedede"
     foregroundColor="#f5f5f5"
   >
-    <rect x="0" y="0" rx="2" ry="2" width="870" height="260" />
+    <rect x="-3" y="3" rx="0" ry="0" width="730" height="600" />
   </ContentLoader>
 )
 
-export default InfoLoader
+export default InfoLoader;
+
+
+

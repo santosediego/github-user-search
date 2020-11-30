@@ -15,7 +15,7 @@ export type User = {
     repos_url: string,
     events_url: string,
     received_events_url: string,
-    //type: "User", //??
+    type: string,
     site_admin: boolean,
     name: string,
     company: string,

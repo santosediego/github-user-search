@@ -5,8 +5,8 @@ const ImageLoader = () => (
   <ContentLoader 
     speed={2}
     width={400}
-    height={460}
-    viewBox="0 0 400 460"
+    height={400}
+    viewBox="0 0 400 400"
     backgroundColor="#dedede"
     foregroundColor="#f5f5f5"
   >
@@ -16,3 +16,6 @@ const ImageLoader = () => (
 )
 
 export default ImageLoader
+
+
+

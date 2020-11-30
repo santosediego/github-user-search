@@ -1,28 +1,30 @@
 import React, { useState } from 'react';
 import { makeRequest } from 'core/utils/request';
 import Button from 'core/components/Button';
-import { User } from 'core/types/User'
-//import ImageLoader from './components/ImageLoader';
-//import InfoLoader from './components/InfoLoader';
+import { User } from 'core/types/User';
+import { toast } from 'react-toastify';
+import UserInfo from '../UserInfo';
 import "./styles.css";
+import Loading from './components/Load/Loading';
 
 const Search = () => {
 
     const [search, setSearch] = useState('');
     const [userData, setUserData] = useState<User>();
-    //const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(event.target.value)
     }
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        //setIsLoading(true);
+        setIsLoading(true);
         event.preventDefault();
 
         makeRequest({ url: `/${search}` })
             .then(response => setUserData(response.data))
-            //.finally(() => setIsLoading(false));
+            .catch(() => { toast.error('Usuário não encontrado!') })
+            .finally(() => setIsLoading(false));
     }
 
     return (
@@ -44,43 +46,16 @@ const Search = () => {
                 </div>
             </form>
 
-            {userData && (
-                <div className="box">
-                    <div className="box-content">
-                        <img className="image-perfil" src={userData?.avatar_url} alt={userData?.login} />
-                        <div className="box-information">
-                            <div className="contadores">
-                                <div className="box-contador">Repositórios públicos: {userData?.public_repos}</div>
-                                <div className="box-contador">Seguidores: {userData?.followers}</div>
-                                <div className="box-contador">Seguindo: {userData?.following}</div>
-                            </div>
-                            <div className="informations">
-                                <h3
-                                    className="information-title">Informações
-                                </h3>
-                                <p className="description-info">
-                                    <strong>Empresa: </strong> {userData?.company}
-                                </p>
-                                <p className="description-info">
-                                    <strong>Website/Blog:</strong> {userData?.blog}
-                                </p>
-                                <p className="description-info">
-                                    <strong>Localidade:</strong> {userData?.location}
-                                </p>
-                                <p className="description-info">
-                                    <strong>Membro desde:</strong> {userData?.created_at}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="btn-perfil">
-                        <a href={userData?.html_url} target="_new">
-                            <Button text="Ver perfil" />
-                        </a>
-
-                    </div>
-                </div>
+            {isLoading ? (
+                <Loading />
+            ) : (
+                userData && (
+                    <UserInfo user={userData} />
+                )
             )}
+            
+            
+            
 
         </>
     );
