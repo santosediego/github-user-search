@@ -1,5 +1,5 @@
 # GitHub User Search
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/santosediego/sds1/blob/master/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/santosediego/github-user-search/blob/main/LICENSE) 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a3085207-e940-4deb-85b5-d6e395db902a/deploy-status)](https://app.netlify.com/sites/ghsdiegosantos/deploys)
 
 ## Sobre o projeto
