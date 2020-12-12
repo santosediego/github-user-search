@@ -20,7 +20,7 @@ O exercício propôs a criação de um projeto ReactJS contendo uma consulta sim
 
 -   Rotas
 
-## Layout web
+## Layout
 ![Web 1](https://github.com/santosediego/assets/blob/main/github-user-search/githubsearch001.png)
 
 ![Web 2](https://github.com/santosediego/assets/blob/main/github-user-search/githubsearch002.png)
@@ -37,7 +37,7 @@ Pré-requisitos: npm / yarn
 
 ```bash
 # clonar repositório
-git clone https://github.com/santosediego/sds1.git
+git clone https://github.com/santosediego/github-user-search
 
 # instalar dependências
 yarn install
@@ -46,8 +46,6 @@ yarn install
 yarn start
 ```
 
-# Autor
+## Autor
 
 Diego Santos
-
-(34) 9 9860-2508
